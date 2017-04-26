@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -23,30 +24,95 @@
 }
 
 .choice a {
-  width: 22%;
+  width: 20%;
   height: 19rem;
   background-size: cover;
   position: relative;
   box-shadow: 0 0 0.7rem #ff0000;
 }
 
-.choice a::after {
+a:hover::after {
+  visibility: visible;
+}
+
+.lady {
+  background: url("../src/lady.jpg");
+}
+
+.lady::after {
   position: absolute;
   display: block;
-  content: "";
+  content: "Женская одежда";
   width: 100%;
   height: 3rem;
   background-color: #ff0000;
   opacity: 0.5;
   visibility: hidden;
+  top: 16rem;
+  color: white;
+  text-align: center;
+  line-height: 3rem;
+  transition: up 3s linear;
 }
 
-.choice a::after:hover::after {
-  visibility: visible;
+.man {
+  background: url("../src/man5.jpg");
 }
 
-.lady {
-  background: url(lady.jpg);
+.man::after {
+  position: absolute;
+  display: block;
+  content: "Мужская одежда";
+  width: 100%;
+  height: 3rem;
+  background-color: #ff0000;
+  opacity: 0.5;
+  visibility: hidden;
+  top: 16rem;
+  color: white;
+  text-align: center;
+  line-height: 3rem;
+  transition: 3s;
+}
+
+.child {
+  background: url("../src/child.jpg");
+}
+
+.child::after {
+  position: absolute;
+  display: block;
+  content: "Подростковая одежда";
+  width: 100%;
+  height: 3rem;
+  background-color: #ff0000;
+  opacity: 0.5;
+  visibility: hidden;
+  top: 16rem;
+  color: white;
+  text-align: center;
+  line-height: 3rem;
+  transition: 3s;
+}
+
+.baby {
+  background: url("../src/baby.jpg");
+}
+
+.baby::after {
+  position: absolute;
+  display: block;
+  content: "Детская одежда";
+  width: 100%;
+  height: 3rem;
+  background-color: #ff0000;
+  opacity: 0.5;
+  visibility: hidden;
+  top: 16rem;
+  color: white;
+  text-align: center;
+  line-height: 3rem;
+  transition: 3s;
 }
 
 body {
@@ -79,9 +145,14 @@ header .menu a:hover {
   opacity: 1;
 }
 
-.contacts {
+.wrapper {
   display: flex;
   margin: 5rem auto;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
 }
 
 .phone, .address, .map, .work_hours {
